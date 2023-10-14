@@ -2,8 +2,8 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth2').Strategy;
 
 passport.use(new GoogleStrategy({
-    clientID: "439414969048-1qosege0vemqo79etqns4r6983ada6jj.apps.googleusercontent.com",
-    clientSecret: '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',
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "http://localhost:4001/google/callback",
     passReqToCallback: true
 },
